@@ -1,0 +1,15 @@
+create table tb_board (
+	idx int not null auto_increment comment '번호 (PK)',
+    title varchar(100) not null comment '제목',
+    content varchar(3000) not null comment '내용',
+    writer varchar(20) not null comment '작성자',
+    view_cnt int not null default 0 comment '조회 수', 
+    notice_yn enum('Y', 'N') not null default 'N' comment '공지글 여부',
+    secret_yn enum('Y', 'N') not null default 'N' comment '비밀글 여부',
+    delete_yn enum('Y', 'N') not null default 'N' comment '삭제 여부', 
+    insert_time datetime not null default NOW() comment '등록일',
+    update_time datetime null comment '수정일',
+    delete_time datetime null comment '삭제일',
+    primary key (idx)
+) comment '게시판';
+
