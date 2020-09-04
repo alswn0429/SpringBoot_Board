@@ -69,4 +69,6 @@ public class DBConfiguration {
 	public org.apache.ibatis.session.Configuration mybatisConfg() {
 		return new org.apache.ibatis.session.Configuration();
 	}
+	
+
 }
